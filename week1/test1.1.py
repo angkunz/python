@@ -1,0 +1,8 @@
+name =input('Input Name : ')
+surname =input('Input Surname : ')
+year =input('Input Year : ')
+studentid =input('Input Student ID : ')
+print('%s'%name)
+print('%s'%surname)
+print('%s'%year)
+print('%s'%studentid)
