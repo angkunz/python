@@ -13,4 +13,3 @@ class Shop :
 
 
 while True :
-    
