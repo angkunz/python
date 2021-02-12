@@ -3,20 +3,12 @@ product = []
 price = []
 amount = []
 class Shop :
-    def power(self) :
-        i = 0
-        while i < 100 :
-            a = 0
-            amount.append(a)
-            i+=1
     def create2(self) :
-        location = 0
         while True :
             os.system('cls')
             print('เพิ่มรายการสินค้า หากต้องการยกเลิกกรอก exit')
             nameproduct = input('เพิ่มชื่อสินค้า :')
             if nameproduct == 'exit' :
-                os.system('cls')
                 break
             else :
                 if nameproduct in product :
@@ -25,14 +17,12 @@ class Shop :
                     amount[location]+=int(amountproduct)
                 else :
                     priceproduct = input('เพิ่มราคาสินค้า :')
-                    amountproduct = input('จำนวนสินค้า :')
+                    amountproduct = int(input('จำนวนสินค้า :'))
                     product.append(nameproduct)
                     price.append(priceproduct)
-                    location = product.index(nameproduct)
-                    amount[location]+=int(amountproduct)
+                    amount.append(amountproduct)
             print('ทำรายการเสร็จสิ้น')
     def delete(self) :
-        location = 0
         while True :
             os.system('cls')
             print('ลบรายการสินค้า กรอก exit เมื่อเสร็จสิ้น')
@@ -71,12 +61,15 @@ class Shop :
             print('\n')
         else :
             print('ไม่มีรายการ\n\n')
+        p = input('กด (y) เพื่อกลับหน้าเมนู :')
+        if p.lower() == 'y' :
+            pass
 x = Shop()
-x.power()
 while True :
     os.system('cls')
-    print('กรุณาเลือกเมนู\n[a]เพื่อเพิ่มสินค้า\n[s]แสดงรายการสินค้า\n[d]ลบรายการสินค้า\n[x]ออกจากโปรแกรม')
-    menu = input('เลือกเมนู : ')
+    print('*'*10+'Coconut Shop'+'*'*10)
+    print('\tกรุณาเลือกเมนู\n\t[a]เพื่อเพิ่มสินค้า\n\t[s]แสดงรายการสินค้า\n\t[d]ลบรายการสินค้า\n\t[x]ออกจากโปรแกรม')
+    menu = input('\tเลือกเมนู : ')
     if menu == 'a' :
         x.create2()
     elif menu == 's' :
@@ -90,4 +83,3 @@ while True :
             break
         else :
             os.system('cls')
-#Thank you
