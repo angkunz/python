@@ -106,7 +106,7 @@ while True:
             print('ได้ทำการกลับสู่ระบบแล้ว')
             continue
         else:
-            print('ทามรายย กดรายยอะ')
+            print('รู้จัก y กับ n ป่ะ')
 '''"""reset"""     
 DELETE FROM students;
 DELETE FROM sqlite_sequence WHERE name = 'students'
